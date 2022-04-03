@@ -15,8 +15,8 @@ const App = () => {
   useEffect(() => {
     const fetchItems = async () => {
       //perform two fetches because api only can get 5000 at a time.
-      const result = await axios("https://randomuser.me/api/?results=5");
-      const moreResult = await axios("https://randomuser.me/api/?results=2");
+      const result = await axios("https://randomuser.me/api/?results=5000");
+      const moreResult = await axios("https://randomuser.me/api/?results=2000");
       const allResults = result.data.results.concat(moreResult.data.results);
 
       //Sort the data alphabetically by first name.

@@ -1,9 +1,10 @@
 import React from "react";
 
-const UserDetails = ({user, setUser}) => {
+const UserDetails = ({user, setUser, backOut}) => {
   return (
     <div>
       <img src={user.picture.large} alt="Users profile"></img>
+      <button style={{color: 'blue'}} onClick={() => backOut()}>Back to list</button>
       <h1>{user.name.title + " " + user.name.first + " " + user.name.last}</h1>
       <h3>Email:</h3>
       <p>{user.email}</p>
@@ -21,7 +22,7 @@ const UserDetails = ({user, setUser}) => {
       <p>{user.phone}</p>
       <h3>Date of birth:</h3>
       <p>{user.dob.date}</p>
-      <button onClick={() => setUser("")}>Back to list</button>
+      <button style={{color: 'blue'}} onClick={() => backOut()}>Back to list</button>
     </div>
   );
 };
